@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .audio-icon {
+        background-image: url('./public/image/chatbox/audio-button.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .audio-icon.active {
+        background-image: url('./public/image/chatbox/audio-active.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .cancel-icon {
+        background-image: url('./public/image/chatbox/cancel.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .cancel-icon.active:hover {
+        opacity: 0.8;
+    }
+}
+
+@layer components {
+    .chat-tab {
+        font-weight: 300;
+        line-height: 20px;
+        padding: 2px 5px;
+        font-size: 13px;
+        color: #ccc;
+        background-color: #808080;
+        cursor: pointer;
+        user-select: none;
+    }
+    .chat-tab.active {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 900;
+    }
+    .chat-tab.active.global {
+        background-color: #2aae67;
+    }
+    .chat-tab.active.private {
+        background-color: #ff7000;
+    }
+
+    .chat-log {
+        position: relative;
+        background-color: #0000004d;
+        border-radius: 10px;
+        color: #fff;
+        padding: 10px 25px;
+        margin: 0 0.25rem 0.5rem 0;
+        font-size: 11px;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        word-break: break-all;
+    }
+    .chat-log .username {
+        cursor: not-allowed;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 5px;
+        font-weight: 700;
+        position: relative;
+        padding: 2px 5px;
+    }
+    .chat-log .username.myself {
+        background-color: rgb(69, 144, 179);
+    }
+    .chat-log .username.global {
+        background-color: #2aae67;
+    }
+    .chat-log .username.private {
+        background-color: #ff7000;
+    }
+    .chat-log .message {
+        cursor: default;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .chat-log button.audio.message {
+        background: url('./public/image/chatbox/audio-play.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        margin: 5px 5px 8px 5px;
+    }
+
+    .chat-log .recording {
+        font-size: 11px;
+        align-items: bottom;  
+    }
+
+    .chat-log button.audio.message.playing {
+        background: url('./public/image/chatbox/audio-pause.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        margin: 5px 5px 8px 5px;
+    }    
+
+    #timer {
+        user-select: none; /* Standard syntax */
+        -moz-user-select: none; /* Firefox */
+    }
+}
+
+@layer utilities {
+    .circle-success {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 1px;
+        background-color: #2aae67;
+    }
+    .circle-warning {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 1px;
+        background-color: #ff7000;
+    }
+}

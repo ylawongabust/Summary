@@ -1,0 +1,17 @@
+export const sessionIdEl = document.getElementById('session-id');
+export const getVoiceBtnEl = document.getElementById('btn-getVoice');
+export const showLogBtnEl = document.getElementById('chat-showLog-btn');
+export const userListEl = document.getElementById('chat-userList');
+export const showUserListBtnEl = document.getElementById('chat-showUserList-btn');
+export const targetUserEl = document.getElementById('chat-targetUser');
+export const chatInputEl = document.getElementById('chat-input');
+export const sendVoiceBtnEl = document.getElementById('send-voice-btn');
+export const sendtextBtnEl = document.getElementById('send-text-btn');
+export const logsConEl = document.getElementById('chat-logs-container');
+export const logsSubConEl = document.getElementById('chat-logs-subContainer');
+export const logsNavEl = document.getElementById('chat-logs-nav');
+export const logsEl = document.getElementById('chat-logs');
+export const tabsEl = document.getElementById('chat-tabs');
+export const tabGlobalEl = document.getElementById('chat-tab-global');
+export const tabPrivateEl = document.getElementById('chat-tab-private');
+export const toastEl = document.getElementById('chat-log-toast');

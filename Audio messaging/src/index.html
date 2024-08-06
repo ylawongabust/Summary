@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Colyseus / Push To Talk</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="./output.css" />
+    </head>
+
+    <body class="bg-slate-500">
+        <div class="flex flex-col items-center gap-y-2 mt-8">
+            <img src="https://cdn.jsdelivr.net/gh/colyseus/colyseus@master/media/header.png" class="w-48" />
+
+            <div>Client <span id="session-id"></span></div>
+
+        </div>
+
+        <div>
+            <div
+                id="chat-container"
+                class="absolute left-1/2 w-1/2 translate-x-[-50%] flex flex-col-reverse justify-center items-center h-auto bottom-8 gap-y-2"
+            >
+                <div
+                    id="chat-bar"
+                    class="w-full flex justify-evenly items-center bg-[#0003] rounded-[20px] px-[10px] z-10"
+                >
+                    <button
+                        id="chat-showLog-btn"
+                        class="bg-[url('./public/image/chatbox/chat-record.svg')] bg-cover bg-no-repeat w-5 h-5 m-1"
+                    ></button>
+                    <div class="relative">
+                        <div
+                            id="chat-userList"
+                            class="hidden absolute left-0 bottom-5 flex flex-col bg-[#0003] text-white w-24 h-auto px-2 py-[2px] rounded"
+                        ></div>
+                    </div>
+                    <button
+                        id="chat-showUserList-btn"
+                        data-status="close"
+                        class="bg-[url('./public/image/chatbox/private-chat.svg')] bg-cover bg-no-repeat w-5 h-5 m-1"
+                    ></button>
+                    <span id="chat-targetUser" class="flex justify-center items-center gap-y-1 text-white"></span>
+                    <input
+                        id="chat-input"
+                        class="flex-1 h-5 mx-[10px] bg-[#fff0] rounded-[10px] text-white p-2 font-sans text-sm"
+                        type="text"
+                        maxlength="76"
+                        placeholder="Say Something"
+                    />
+                    <button 
+                        id="send-voice-btn" 
+                        class="audio-icon bg-cover bg-no-repeat w-5 h-5 m-1" 
+                    ></button>
+                    <button
+                        id="send-text-btn"
+                        class="bg-[url('./public/image/chatbox/send-white.svg')] bg-cover bg-no-repeat w-5 h-5 m-1"
+                    ></button>
+                    <div class="usersSelector"></div>
+                </div>
+                <div
+                    id="chat-logs-container"
+                    data-status="close"
+                    class="has-[#chat-logs.log]:h-[70%] has-[#chat-logs.log]:z-[5] relative flex flex-col max-h-[70vh] overflow-hidden w-full bg-[#0003]"
+                >
+                    <div id="chat-logs-nav" class="hidden flex justify-between items-center text-white">
+                        <div id="chat-tabs" data-selected="global" class="flex justify-center items-center">
+                            <span id="chat-tab-global" class="chat-tab active global">Global</span>
+                            <span id="chat-tab-private" class="chat-tab private">Private</span>
+                        </div>
+                        <div id="chat-tips" class="flex justify-center items-center gap-x-2 font-bold text-[10px] mr-2">
+                            <span id="chat-tip-global" class="before:circle-success">Global</span>
+                            <span id="chat-tip-private" class="before:circle-warning">Private</span>
+                        </div>
+                    </div>
+
+                    <div id="chat-logs-subContainer" class="hidden px-1 flex-1 overflow-y-auto">
+                        <div id="chat-logs"></div>
+                    </div>
+
+                    <div id="chat-log-toast"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./index.js" type="module"></script>
+    </body>
+</html>
