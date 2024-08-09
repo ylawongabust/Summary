@@ -32,3 +32,4 @@
 
 - Emoji picker reference: https://github.com/joeattardi/picmo
 - No country flags currently.
+- Start shifting the emoji panel only after all emojis are loaded.
