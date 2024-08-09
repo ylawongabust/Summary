@@ -27,3 +27,8 @@
 	```
 
 	Open [http://localhost:5173/](http://localhost:5173/).
+
+## Remarks
+
+- Emoji picker reference: https://github.com/joeattardi/picmo
+- No country flags currently.
