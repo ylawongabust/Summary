@@ -9,7 +9,7 @@
 
 3. [Ava](Ava), [Bella](Bella)
 
-	These two directories stores the same models but with different number of faces.
+	These two directories stores models that look alike but with different number of faces.
 
 4. [Fantasy](Fantasy), [Vol.1](Vol.1), [Vol.2](Vol.2), [Vol.3](Vol.3), [Vol.4](Vol.4)
 
