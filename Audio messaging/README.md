@@ -4,7 +4,7 @@
 
 2. Library used: Colyseus.
 
-3. No profanity filter is currently applied.
+3. No profanity filter is applied.
 
 ## Usage
 
